@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine's Day 💕</title>
+<style>
+    body {
+        margin: 0;
+        padding: 15px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: linear-gradient(135deg, #ffafbd, #ffc3a0, #ffd8cb);
+        font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .container {
+        text-align: center;
+        max-width: 700px;
+        width: 100%;
+        padding: 15px;
+        z-index: 10;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        animation: fadeIn 1.5s ease;
+        backdrop-filter: blur(8px);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        margin-bottom: 15px;
+    }
+
+    .images-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .image-frame {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #ff758f;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .image-frame:nth-child(2) {
+        animation-delay: 1s;
+        border-color: #ff4d6d;
+    }
+
+    .image-frame:nth-child(3) {
+        animation-delay: 2s;
+        border-color: #e63946;
+    }
+
+    .image-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    h1 {
+        color: #e63946;
+        margin-bottom: 12px;
+        font-size: 2.2rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        animation: pulse 2s infinite;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #555;
+        margin: 12px 0;
+        line-height: 1.5;
+    }
+
+    .message {
+        background: rgba(255, 182, 193, 0.2);
+        padding: 18px;
+        border-radius: 12px;
+        margin: 18px 0;
+        border-left: 4px solid #ff758f;
+        font-size: 1.1rem;
+    }
+
+    .simple-heart-container {
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .simple-heart {
+        font-size: 100px;
+        animation: pulse 2s infinite;
+    }
+
+    button {
+        margin-top: 18px;
+        padding: 14px 35px;
+        border: none;
+        border-radius: 40px;
+        background: linear-gradient(to right, #e63946, #ff4d6d);
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 5px 12px rgba(230, 57, 70, 0.4);
+        font-weight: bold;
+    }
+
+    button:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 7px 18px rgba(230, 57, 70, 0.6);
+    }
+
+    .heart {
+        position: absolute;
+        font-size: 20px;
+        animation: floatUp 6s linear infinite;
+        color: #e63946;
+        z-index: 1;
+        user-select: none;
+    }
+
+    .floating-gif {
+        position: absolute;
+        width: 50px;
+        animation: floatUp 8s linear infinite;
+        z-index: 0;
+        user-select: none;
+    }
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(100vh) rotate(0deg);
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.8); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .hearts-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+    }
+</style>
+</head>
+<body>
+
+<div class="hearts-background" id="hearts"></div>
+
+<div class="container">
+    <div class="card">
+        <h1>Happy Valentine's Day 💖</h1>
+        <p>My Dearest Brynna,</p>
+        
+        <div class="simple-heart-container">
+            <div class="simple-heart">💖</div>
+        </div>
+        
+        <div class="message">
+            <p>You make every day brighter just by being you.</p>
+            <p>Love yourself you are the best valentine in your whole life.</p>
+        </div>
+        
+        <div class="images-container">
+            <div class="image-frame">
+                <img src="./image/pic1.jfif" alt="Valentine Picture 1">
+            </div>
+            <div class="image-frame">
+                <img src="./image/pic2.jfif" alt="Valentine Picture 2">
+            </div>
+            <div class="image-frame">
+                <img src="./image/pic3.jfif" alt="Valentine Picture 3">
+            </div>
+        </div>
+        
+        <p style="font-size: 1.3rem;">With all my love and affection 💕</p>
+        
+        <button onclick="showLove()">Extra Love 💘</button>
+    </div>
+</div>
+<script>
+
+function createHearts() {
+    const heartsContainer = document.getElementById('hearts');
+    for (let i = 0; i < 10; i++) {
+        const heart = document.createElement('div');
+        heart.innerHTML = '💖';
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.fontSize = (Math.random() * 15 + 12) + 'px';
+        heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        heart.style.animationDelay = (Math.random() * 5) + 's';
+        heartsContainer.appendChild(heart);
+    }
+}
+
+function showLove() {
+    for (let i = 0; i < 8; i++) {
+        const gif = document.createElement('img');
+        const gifs = [
+            'https://media.giphy.com/media/3o7TKsQ8UQ1h2nQrsE/giphy.gif',
+            'https://media.giphy.com/media/l0HlG8vJXWTTVxlQI/giphy.gif',
+            'https://media.giphy.com/media/3o7TKUUX9BJlYW8N72/giphy.gif'
+        ];
+        gif.src = gifs[Math.floor(Math.random() * gifs.length)];
+        gif.alt = 'Love GIF';
+        gif.className = 'floating-gif';
+        gif.style.left = Math.random() * 100 + 'vw';
+        gif.style.width = (Math.random() * 30 + 35) + 'px';
+        gif.style.animationDuration = (Math.random() * 5 + 6) + 's';
+        document.body.appendChild(gif);
+
+        setTimeout(() => {
+            gif.remove();
+        }, 8000);
+    }
+    
+    for (let i = 0; i < 15; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = ['💖', '💕', '💘', '💝', '💗'][Math.floor(Math.random() * 5)];
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (2 + Math.random() * 3) + 's';
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+}
+
+window.onload = createHearts;
+</script>
+
+</body>
+</html>
